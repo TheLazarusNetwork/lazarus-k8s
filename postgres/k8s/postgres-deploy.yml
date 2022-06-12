@@ -13,7 +13,8 @@ spec:
     spec:
       containers:
         - name: postgres-app
-          image: postgres
+          image: postgres:14
+          args: ["-cshared_preload_libraries=pg_stat_statements"]
           resources:
             limits:
               memory: "128Mi"
