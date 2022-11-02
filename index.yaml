@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  go-backend:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-02T12:16:38.231547665Z"
+    description: A Helm chart for Kubernetes
+    digest: a4ecdc997a2ae7d02660e65f721480e4bfb088cd4e1b1a73300a625b1f7cd02c
+    name: go-backend
+    type: application
+    urls:
+    - https://github.com/TheLazarusNetwork/lazarus-k8s/releases/download/go-backend-0.1.0/go-backend-0.1.0.tgz
+    version: 0.1.0
+  roles:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-02T12:16:38.483101649Z"
+    description: A Helm chart for Kubernetes
+    digest: 024fec07a870032aeb91f38433e582f346eeb5fbf318693f516d129a5f841b4e
+    name: roles
+    type: application
+    urls:
+    - https://github.com/TheLazarusNetwork/lazarus-k8s/releases/download/roles-0.1.0/roles-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-11-02T12:16:37.785202653Z"
