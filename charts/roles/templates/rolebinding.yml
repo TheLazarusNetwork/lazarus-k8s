@@ -1,13 +1,13 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: deploys-pods
-  namespace: lazarus-network
+  name: {{.Values.name}}
+  namespace: {{.Values.namespace}}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: lazarus-github-role
+  name: {{.Values.name}}
 subjects:
   - apiGroup: rbac.authorization.k8s.io
     kind: User
-    name: lazarus-github-deployer
+    name: {{.Values.name}}

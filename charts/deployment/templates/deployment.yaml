@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.name }}
+  namespace: {{.Values.namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: {{.Values.name }}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.name }}
+    spec:
+      containers:
+        - name: {{.Values.name }}
+          image: {{ .Values.image }}
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: {{.Values.port }}
+          volumeMounts:
+            - mountPath: "/app/.env"
+              subPath: ".env"
+              name: env_file
+              readOnly: true
+          env:
+            - name: "APP_PORT"
+              value: "{{.Values.port }}"
+      volumes:
+        - name: env_file
+          secret:
+            secretName: superiad_env_secret
