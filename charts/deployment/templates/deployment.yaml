@@ -24,12 +24,12 @@ spec:
           volumeMounts:
             - mountPath: "/app/.env"
               subPath: ".env"
-              name: env_file
+              name: env-file
               readOnly: true
           env:
             - name: "APP_PORT"
               value: "{{.Values.port }}"
       volumes:
-        - name: env_file
+        - name: env-file
           secret:
             secretName: superiad_env_secret
