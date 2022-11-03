@@ -15,4 +15,4 @@ rules:
         "secrets",
         "replicasets"
       ]
-    verbs: ["get", "patch", "create", "watch", "list", "delete"]
+    verbs: ["get", "patch", "create", "watch", "list", "delete","update"]
