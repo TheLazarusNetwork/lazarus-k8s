@@ -35,6 +35,16 @@ entries:
   roles:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-03T05:22:41.847325345Z"
+    description: A Helm chart for Kubernetes
+    digest: abe94562feb7f4c6b8b3e1615ab802f7cf9d53e4f1b2e1e0c0aa96a7aae3e3fe
+    name: roles
+    type: application
+    urls:
+    - https://github.com/TheLazarusNetwork/lazarus-k8s/releases/download/roles-0.1.1/roles-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-02T12:16:38.483101649Z"
     description: A Helm chart for Kubernetes
     digest: 024fec07a870032aeb91f38433e582f346eeb5fbf318693f516d129a5f841b4e
