@@ -13,5 +13,6 @@ rules:
         "services",
         "statefulsets",
         "secrets",
+        "replicasets"
       ]
     verbs: ["get", "patch", "create", "watch", "list", "delete"]
