@@ -3,6 +3,16 @@ entries:
   deployment:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-03T08:30:41.145506361Z"
+    description: A Helm chart for Kubernetes
+    digest: 747e0c69e91eadfe47c5cd8530c7900c05639b1dbea73dfb4c6548f3057b4661
+    name: deployment
+    type: application
+    urls:
+    - https://github.com/TheLazarusNetwork/lazarus-k8s/releases/download/deployment-0.1.6/deployment-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-03T07:52:28.210023042Z"
     description: A Helm chart for Kubernetes
     digest: 6836ec46a9b0e86f24c1aa08afcb01ae245af027e9d6a3b83fa1fc090bbdba08
