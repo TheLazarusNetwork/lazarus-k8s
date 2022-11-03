@@ -1,7 +1,9 @@
 namespace:
 name:
-image:
 env_secret_name:
 alb_group_name:
 host:
 port:
+image:
+  repository:
+  tag:
