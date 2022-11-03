@@ -21,15 +21,18 @@ spec:
               cpu: "100m"
           ports:
             - containerPort: {{.Values.port }}
+          env:
+            - name: "APP_PORT"
+              value: "{{.Values.port }}"
+{{ if .Values.env_secret_name }}
           volumeMounts:
             - mountPath: "/app/.env"
               subPath: ".env"
               name: env-file
               readOnly: true
-          env:
-            - name: "APP_PORT"
-              value: "{{.Values.port }}"
+
       volumes:
         - name: env-file
           secret:
             secretName: {{.Values.env_secret_name}}
+{{ end }}
