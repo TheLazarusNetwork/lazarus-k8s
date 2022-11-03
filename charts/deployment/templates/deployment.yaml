@@ -32,4 +32,4 @@ spec:
       volumes:
         - name: env-file
           secret:
-            secretName: superiad_env_secret
+            secretName: {{.Values.env_secret_name}}
