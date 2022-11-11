@@ -1,18 +1,28 @@
 apiVersion: rbac.authorization.k8s.io/v1
+{{- if .Values.namespace }}
 kind: Role
+{{- else }}
+kind: ClusterRole
+{{- end }}
 metadata:
   name: {{.Values.name}}
+{{- if .Values.namespace }}
   namespace: {{.Values.namespace}}
+{{- end }}
 rules:
   - apiGroups: ["", "apps", "networking.k8s.io"]
     resources:
-      [
-        "pods",
-        "deployments",
-        "ingresses",
-        "services",
-        "statefulsets",
-        "secrets",
-        "replicasets"
-      ]
+      - "pods"
+      - "deployments"
+      - "ingresses"
+      - "services"
+      - "statefulsets"
+      - "secrets"
+      - "replicasets"
+{{- if .Values.namespace }}
+{{- else }}
+      - "pods/log"
+      - "namespaces"
+      - "pods/portforward"
+{{- end }}
     verbs: ["get", "patch", "create", "watch", "list", "delete","update"]
